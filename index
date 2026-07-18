@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><link rel="icon" type="image/png" href="images/logo.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aya Mohamed | Mechanical &amp; Aerospace Engineering Portfolio</title>
+<meta name="description" content="Aya Mohamed — M.S. Mechanical & Aerospace Engineering, UC Irvine. Fluid dynamics, propulsion, and prototyping.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  html{scroll-behavior:smooth;}
+  .section{scroll-margin-top:90px;}
+  #top{scroll-margin-top:0;}
+  #contact{scroll-margin-top:90px;}
+  :root{
+    --dark:#0d0d0f;
+    --accent-bronze:#9c7a3c;
+    --navy:#3a5f85;
+    --grey-text:#6b6b6b;
+    --light-grey:#f4f4f4;
+    --border:#e2e2e2;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{
+    font-family:'Poppins', sans-serif;
+    color:#1a1a1a;
+    background:#fff;
+  }
+  a{text-decoration:none;color:inherit;}
+  img, .ph{display:block; width:100%; height:100%; object-fit:cover;}
+  .gallery-trigger{position:relative; cursor:pointer; overflow:hidden;}
+  .gallery-trigger img, .gallery-trigger video{width:100%; height:100%; object-fit:cover; transition:transform .35s ease;}
+  .gallery-trigger:hover img, .gallery-trigger:hover video{transform:scale(1.05);}
+  .gallery-trigger .img-count{
+    position:absolute; bottom:8px; right:8px;
+    background:rgba(0,0,0,0.6); color:#fff;
+    font-size:0.7rem; letter-spacing:.03em;
+    padding:3px 8px; border-radius:12px;
+  }
+  .section{padding:100px 8vw;}
+  @media (max-width:700px){ .section{padding:60px 6vw;} }
+
+  /* placeholder image blocks */
+  .ph{
+    background:linear-gradient(135deg,#dfe3e6,#c7ccd1);
+    display:flex;align-items:center;justify-content:center;
+    color:#8a8f96;font-size:0.75rem;letter-spacing:.05em;
+    text-transform:uppercase;
+    text-align:center;
+    padding:10px;
+  }
+
+  /* ---------------- HERO ---------------- */
+  .hero{
+    background:#0d0d0f;
+    color:#fff;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:80px 6vw;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero-video{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    z-index:0;
+  }
+  .hero-overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(10,10,12,0.55);
+    z-index:1;
+  }
+  .hero-inner{max-width:760px; position:relative; z-index:2;}
+  .hero h1{
+    font-family:'Playfair Display', serif;
+    font-weight:600;
+    font-size:clamp(2.6rem,8vw,5rem);
+    line-height:1.05;
+    margin-bottom:36px;
+  }
+  .hero .subtitle{
+    font-size:1.3rem;
+    font-weight:300;
+    margin-bottom:14px;
+  }
+  .hero .role{
+    font-size:1.1rem;
+    font-weight:400;
+    color:#c9c9c9;
+    margin:18px 0 30px;
+  }
+  .hero .tagline{
+    font-size:1.15rem;
+    font-weight:600;
+    letter-spacing:.02em;
+    margin-bottom:36px;
+  }
+  .hero-badges{
+    display:flex;flex-wrap:wrap;gap:10px;justify-content:center;
+    max-width:640px;margin:0 auto;
+  }
+  .hbadge{
+    font-size:0.75rem;letter-spacing:.03em;text-transform:uppercase;
+    border:1px solid rgba(255,255,255,0.25);color:#e8e8e8;
+    padding:8px 14px;border-radius:20px;
+  }
+  .hero-cta{
+    margin-top:32px;
+    display:flex;
+    justify-content:center;
+  }
+  .btn-download-cv{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    background:#fff;
+    color:var(--navy);
+    border:none;
+    border-radius:30px;
+    padding:14px 32px;
+    font-family:'Poppins',sans-serif;
+    font-size:0.95rem;
+    font-weight:600;
+    letter-spacing:.02em;
+    text-decoration:none;
+    transition:background .2s, transform .2s;
+  }
+  .btn-download-cv:hover{
+    background:#e8e8e8;
+    transform:translateY(-2px);
+  }
+
+  /* ---------------- SECTION HEADER ---------------- */
+  h2.section-title{
+    font-size:2.6rem;
+    font-weight:400;
+    color:#1a1a1a;
+    margin-bottom:16px;
+  }
+  p.section-sub{
+    color:var(--grey-text);
+    font-size:1rem;
+    max-width:60ch;
+    margin-bottom:60px;
+    line-height:1.7;
+  }
+
+  /* ---------------- STATS BAND ---------------- */
+  .stats-band{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    border-top:1px solid var(--border);
+    border-bottom:1px solid var(--border);
+  }
+  .stats-band .stat{
+    padding:40px 20px;
+    text-align:center;
+    border-right:1px solid var(--border);
+  }
+  .stats-band .stat:last-child{border-right:none;}
+  .stats-band .stat .num{
+    font-family:'Playfair Display', serif;
+    font-size:2.4rem;
+    color:var(--navy);
+  }
+  .stats-band .stat .lab{
+    font-size:0.8rem;
+    letter-spacing:.04em;
+    text-transform:uppercase;
+    color:var(--grey-text);
+    margin-top:6px;
+  }
+  @media (max-width:700px){
+    .stats-band{grid-template-columns:repeat(2,1fr);}
+    .stats-band .stat:nth-child(2){border-right:none;}
+  }
+
+  /* ---------------- EXPERIENCE ROWS ---------------- */
+  .exp-row{
+    display:grid;
+    grid-template-columns:340px 1fr;
+    gap:60px;
+    align-items:center;
+    margin-bottom:90px;
+  }
+  .exp-row:last-child{margin-bottom:0;}
+  .exp-row.no-img{grid-template-columns:1fr; max-width:74ch;}
+  .exp-row.img-right{grid-template-columns:1fr 300px;}
+  .exp-row.img-right .exp-img{order:2;}
+  @media (max-width:800px){
+    .exp-row{grid-template-columns:1fr; gap:24px;}
+    .exp-row.img-right .exp-img{order:0;}
+  }
+  .edu-wrap{
+    display:grid;
+    grid-template-columns:1fr 380px;
+    gap:60px;
+    align-items:start;
+  }
+  .edu-wrap .edu-text .exp-row{margin-bottom:70px;}
+  .edu-wrap .edu-text .exp-row:last-child{margin-bottom:0;}
+  .edu-photo{
+    aspect-ratio:3/4;
+    border-radius:8px;
+    overflow:hidden;
+    position:sticky;
+    top:110px;
+  }
+  @media (max-width:900px){
+    .edu-wrap{grid-template-columns:1fr;}
+    .edu-photo{aspect-ratio:16/9; position:static;}
+  }
+  .exp-row .exp-img{
+    aspect-ratio:4/3;
+    border-radius:8px;
+    overflow:hidden;
+  }
+  .exp-row h3{
+    font-size:1.5rem;
+    font-weight:600;
+    margin-bottom:4px;
+  }
+  .exp-row .org{
+    font-style:italic;
+    font-weight:400;
+    font-size:1.1rem;
+    display:block;
+    margin-bottom:6px;
+  }
+  .exp-row .meta{
+    font-size:0.85rem;
+    letter-spacing:.03em;
+    text-transform:uppercase;
+    color:var(--navy);
+    margin-bottom:16px;
+    display:block;
+  }
+  .exp-row p{
+    color:var(--grey-text);
+    font-size:1rem;
+    line-height:1.7;
+    max-width:60ch;
+  }
+  .exp-row ul{
+    color:var(--grey-text);
+    font-size:0.98rem;
+    line-height:1.7;
+    max-width:62ch;
+    padding-left:20px;
+    margin-top:8px;
+  }
+  .exp-row li{margin-bottom:6px;}
+
+  /* ---------------- EXPERIENCE / INTERNSHIP BOXED GRID ---------------- */
+  .exp-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:32px;
+  }
+  @media (max-width:800px){ .exp-grid{grid-template-columns:1fr;} }
+  .exp-grid .exp-row{
+    background:#fff;
+    border:1px solid var(--border);
+    border-radius:14px;
+    padding:34px;
+    margin-bottom:0;
+    max-width:none;
+    box-shadow:0 4px 18px rgba(0,0,0,0.045);
+    transition:transform .25s ease, box-shadow .25s ease;
+  }
+  .exp-grid .exp-row:hover{
+    transform:translateY(-5px);
+    box-shadow:0 14px 34px rgba(0,0,0,0.09);
+  }
+  .exp-grid .exp-row p,
+  .exp-grid .exp-row ul{max-width:none;}
+  .row-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px;}
+  .row-chips .chip{
+    font-size:0.78rem;
+    color:var(--navy);
+    border:1px solid var(--navy);
+    padding:5px 12px;
+    border-radius:20px;
+  }
+
+  /* ---------------- CARD GRID (Skills / Papers / Projects / Awards) ---------------- */
+  .card-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:28px;
+  }
+  .card-grid.three{grid-template-columns:repeat(3,1fr);}
+  @media (max-width:900px){
+    .card-grid, .card-grid.three{grid-template-columns:1fr;}
+  }
+  .card{
+    border:1px solid var(--border);
+    border-radius:8px;
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+    transition:box-shadow .2s, transform .2s;
+  }
+  .card:hover{box-shadow:0 10px 30px rgba(0,0,0,0.07); transform:translateY(-2px);}
+  .card .card-img{aspect-ratio:16/10;}
+  .card .card-body{padding:26px 28px;flex:1;display:flex;flex-direction:column;}
+  .card .tag-eyebrow{
+    font-size:0.75rem;letter-spacing:.05em;text-transform:uppercase;
+    color:var(--navy);margin-bottom:10px;
+  }
+  .card .tag-eyebrow.published{
+  color:var(--accent-bronze);
+}
+  .card h3{font-size:1.2rem;font-weight:600;margin-bottom:10px;line-height:1.3;}
+  .card p{color:var(--grey-text);font-size:0.93rem;line-height:1.65;flex:1;}
+  .card .doi-line{
+  font-size:0.8rem;margin-top:6px;
+}
+.card .doi-line a{
+  color:var(--navy);text-decoration:none;border-bottom:1px solid var(--navy);
+}
+.card .doi-line a:hover{color:var(--accent-bronze);border-bottom-color:var(--accent-bronze);}
+  .card .impact{
+    margin-top:14px;padding-left:12px;border-left:2px solid var(--navy);
+    color:var(--navy);font-size:0.85rem;font-weight:500;
+  }
+  .card .meta-line{
+    font-size:0.8rem;color:#9a9a9a;margin-top:auto;padding-top:14px;
+    border-top:1px solid var(--border);margin-top:16px;
+  }
+  #internships .card{padding:2px 0;}
+  #internships .card-body{padding:24px 28px;}
+  #internships .card-body p{max-width:80ch;}
+
+  /* filter buttons for projects */
+  .filters{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:44px;}
+  .filter-btn{
+    font-size:0.85rem;letter-spacing:.02em;text-transform:uppercase;
+    padding:10px 20px;border:1px solid var(--navy);color:var(--navy);
+    background:transparent;border-radius:24px;cursor:pointer;transition:all .2s;
+  }
+  .filter-btn:hover, .filter-btn.active{background:var(--navy);color:#fff;}
+  .project-card.hide, .award-card.hide{display:none;}
+
+  /* awards mini-card (denser, 15 items) */
+  .award-card{
+    border:1px solid var(--border);
+    border-radius:8px;
+    overflow:hidden;
+    transition:box-shadow .2s, transform .2s;
+  }
+  .award-card:hover{box-shadow:0 10px 24px rgba(0,0,0,0.06); transform:translateY(-2px);}
+  .award-card .card-img{aspect-ratio:16/10;}
+  .award-card .award-body{padding:22px 24px;}
+  .award-card .rank{
+    font-size:0.78rem;letter-spacing:.04em;text-transform:uppercase;
+    color:var(--navy);font-weight:600;
+  }
+  .award-card h3{font-size:1.05rem;font-weight:600;margin:8px 0 4px;}
+  .award-card .meta{font-size:0.8rem;color:#9a9a9a;margin-bottom:10px;display:block;}
+  .award-card p{color:var(--grey-text);font-size:0.9rem;line-height:1.6;}
+  .award-card a{color:var(--navy);font-weight:600;}
+
+  /* skills bars */
+  .skill-col h4{
+    font-size:0.85rem;letter-spacing:.05em;text-transform:uppercase;
+    color:var(--navy);margin-bottom:22px;
+  }
+  .skill-row{margin-bottom:18px;}
+  .skill-row .top{display:flex;justify-content:space-between;font-size:0.92rem;margin-bottom:7px;}
+  .skill-row .top .pct{color:#9a9a9a;font-size:0.82rem;}
+  .bar{height:5px;background:var(--light-grey);border-radius:4px;overflow:hidden;}
+  .bar span{display:block;height:100%;background:var(--navy);border-radius:4px;}
+
+  /* ---------------- GALLERY ---------------- */
+  .gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:24px;
+  }
+  @media (max-width:800px){ .gallery-grid{grid-template-columns:repeat(2,1fr);} }
+  .gallery-grid .g-item{
+    aspect-ratio:1;
+    border-radius:8px;
+    overflow:hidden;
+  }
+
+  /* ---------------- CONTACT ---------------- */
+  #contact{padding:100px 8vw;}
+  .contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:start;
+  }
+  @media (max-width:800px){ .contact-grid{grid-template-columns:1fr;} }
+  .contact-grid .eyebrow{
+    font-size:0.8rem;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    color:var(--navy);
+    margin-bottom:16px;
+    display:block;
+    font-weight:600;
+  }
+  .contact-grid h2{
+    font-size:clamp(2rem,4vw,2.6rem);
+    font-weight:400;
+    line-height:1.15;
+    margin-bottom:18px;
+  }
+  .contact-grid p.lede{
+    color:var(--grey-text);
+    font-size:1rem;
+    max-width:44ch;
+    margin-bottom:36px;
+  }
+  .contact-links{
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+  }
+  .clink{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    font-size:0.98rem;
+    color:var(--grey-text);
+    transition:color .2s;
+  }
+  .clink:hover{color:var(--navy);}
+  .clink .ic{
+    width:36px;height:36px;
+    border:1px solid var(--border);
+    border-radius:6px;
+    display:flex;align-items:center;justify-content:center;
+    color:var(--navy);
+    flex-shrink:0;
+    font-size:0.95rem;
+  }
+  #contactForm{display:flex;flex-direction:column;gap:20px;}
+  #contactForm .field label{
+    display:block;
+    font-size:0.85rem;
+    color:#3a3a3a;
+    margin-bottom:8px;
+  }
+  #contactForm input,
+  #contactForm textarea{
+    width:100%;
+    border:1px solid var(--border);
+    border-radius:6px;
+    padding:14px 16px;
+    font-family:'Poppins',sans-serif;
+    font-size:0.95rem;
+    background:#fff;
+  }
+  #contactForm textarea{min-height:110px; resize:vertical;}
+  .btn.btn-primary{
+    background:var(--navy);
+    color:#fff;
+    border:none;
+    border-radius:30px;
+    padding:15px 40px;
+    font-family:'Poppins',sans-serif;
+    font-size:0.95rem;
+    font-weight:500;
+    cursor:pointer;
+    align-self:flex-start;
+    transition:background .2s;
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+  }
+  .btn.btn-primary:hover{background:#2e4d6b;}
+
+  /* ---------------- SOCIAL / EMAIL BAND ---------------- */
+  .social-band{
+    background:var(--navy);
+    color:#fff;
+    padding:70px 8vw;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    align-items:center;
+    gap:30px;
+  }
+  .social-band .linkedin{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    font-size:1.4rem;
+    font-weight:500;
+  }
+  .social-band .linkedin .li-icon{
+    width:36px;height:36px;
+    background:#fff;
+    color:var(--navy);
+    border-radius:6px;
+    display:flex;align-items:center;justify-content:center;
+    font-weight:700;
+    font-size:1.1rem;
+  }
+  .social-band .facebook{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    font-size:1.4rem;
+    font-weight:500;
+  }
+  .social-band .facebook .fb-icon{
+    width:36px;height:36px;
+    background:#fff;
+    color:var(--navy);
+    border-radius:6px;
+    display:flex;align-items:center;justify-content:center;
+    font-weight:700;
+    font-size:1.1rem;
+  }
+  .social-band .social-cv{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    font-size:1.4rem;
+    font-weight:500;
+  }
+  .social-band .social-cv .cv-icon{
+    width:36px;height:36px;
+    background:#fff;
+    color:var(--navy);
+    border-radius:6px;
+    display:flex;align-items:center;justify-content:center;
+    font-weight:700;
+    font-size:1.1rem;
+  }
+  .social-band .social-links{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    gap:280px;
+  }
+  .social-band .emails{
+    text-align:right;
+    font-size:1.05rem;
+    line-height:1.8;
+  }
+  @media (max-width:600px){ .social-band{flex-direction:column; align-items:flex-start;} .social-band .emails{text-align:left;} }
+
+  /* ---------------- FOOTER NAV ---------------- */
+  header.site-header{
+    padding:26px 8vw;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    border-bottom:1px solid var(--border);
+    flex-wrap:wrap;
+    gap:20px;
+    position:sticky;top:0;background:#fff;z-index:50;
+  }
+  header.site-header .logo{
+    font-family:'Playfair Display', serif;
+    font-size:1.4rem;
+    font-weight:600;
+    display:flex;align-items:center;gap:4px;
+  }
+  header.site-header .logo img{
+    height:40px;
+    width:auto;
+    display:block;
+  }
+  header.site-header nav{
+    display:flex;
+    gap:50px;
+    font-size:0.9rem;
+    flex-wrap:wrap;
+  }
+  header.site-header nav a{
+    padding-bottom:6px;
+  }
+  header.site-header nav a.active{
+    border-bottom:2px solid #1a1a1a;
+  }
+  @media (max-width:900px){ header.site-header nav{gap:14px; font-size:0.78rem;} }
+
+  footer.site-footer{
+    padding:30px 8vw;
+    text-align:center;
+    color:var(--grey-text);
+    font-size:0.85rem;
+    border-top:1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+
+  <!-- HEADER NAV -->
+  <header class="site-header">
+    <div class="logo"><a href="#top"><img src="images/logo.png" alt="Aya Mohamed"></a></div>
+    <nav>
+      <a href="#top" class="active">Home</a>
+      <a href="#education">Education</a>
+      <a href="#experience">Experience</a>
+      <a href="#internships">Internships</a>
+      <a href="#skills">Skills</a>
+      <a href="#papers">Research</a>
+      <a href="#projects">Projects</a>
+      <a href="#awards">Awards</a>
+      <a href="#certificates">Certificates</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <video class="hero-video" autoplay muted loop playsinline>
+      <source src="images/cover.mp4" type="video/mp4">
+    </video>
+    <div class="hero-overlay"></div>
+    <div class="hero-inner">
+      <h1>Aya Mohamed</h1>
+      <p class="subtitle">Mechanical &amp; Aerospace Engineering</p>
+      <p class="subtitle" style="margin-top:-8px;">M.S. Student, UC Irvine</p>
+      <p class="role">Fluid Dynamics &amp; Propulsion Researcher | Control Systems TA</p>
+      <p class="tagline">Turning engineering ideas into things that fly.</p>
+      <div class="hero-badges">
+        <span class="hbadge">1st · NASA Space Apps</span>
+        <span class="hbadge">1st · IEEE Mobility Challenge</span>
+        <span class="hbadge">Gold · ICAN Innovation</span>
+        <span class="hbadge">2nd · Minesweeper Intl.</span>
+        <span class="hbadge">3rd · Eurocontrol Ideathon</span>
+      </div>
+      <div class="hero-cta">
+        <a class="btn-download-cv" href="https://drive.google.com/drive/folders/1D7YjPT8bx4U-fN9mTvsYXHnhiZIiKRhi?usp=sharing" download>
+          <span>⬇</span> Download CV
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <div class="stats-band">
+    <div class="stat"><div class="num" data-target="3" data-suffix="+">0</div><div class="lab">Years Engineering</div></div>
+    <div class="stat"><div class="num" data-target="20" data-suffix="+">0</div><div class="lab">Major Projects</div></div>
+    <div class="stat"><div class="num" data-target="18" data-suffix="">0</div><div class="lab">Awards &amp; Competitions</div></div>
+    <div class="stat"><div class="num" data-target="40000" data-prefix="$" data-suffix="">0</div><div class="lab">Scholarships &amp; Awards</div></div>
+  </div>
+
+  <!-- EDUCATION -->
+  <section class="section" id="education">
+    <h2 class="section-title">Education</h2>
+
+    <div class="edu-wrap">
+      <div class="edu-text">
+        <div class="exp-row no-img">
+          <div>
+            <h3>M.S. Mechanical &amp; Aerospace Engineering</h3>
+            <span class="org">University of California, Irvine — Henry Samueli School of Engineering</span>
+            <span class="meta">Mar 2025 — May 2027 · California, USA</span>
+            <p>Specializing in Fluid Dynamics &amp; Propulsion. Currently a Control Systems Teaching Assistant and graduate researcher running direct numerical simulations of turbulence.</p>
+            <div class="row-chips">
+              <span class="chip">Fluid Dynamics</span>
+              <span class="chip">Propulsion</span>
+              <span class="chip">Control Systems TA</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="exp-row no-img">
+          <div>
+            <h3>B.S. Aerospace Engineering <span style="font-size:0.6em;font-weight:400;color:var(--grey-text);">— Minor in Information Engineering</span></h3>
+            <span class="org">Zewail City of Science and Technology</span>
+            <span class="meta">Sep 2020 — Dec 2024 · Cairo, Egypt</span>
+            <p>Graduated 2nd in cohort with honors, including recognition on the Provost's Honor Roll. Selected as the Class of 2025 Commencement Representative.</p>
+            <div class="row-chips">
+              <span class="chip">Ranked 2nd</span>
+              <span class="chip">Provost's Honor Roll</span>
+              <span class="chip">Minor: Information Eng.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="edu-photo"><img src="images/headshot.jpeg" alt="Aya Mohamed"></div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="section" id="experience" style="background:var(--light-grey);">
+    <h2 class="section-title">Experience</h2>
+
+    <div class="exp-grid">
+    <div class="exp-row no-img">
+      <div>
+        <h3>Teaching Assistant &amp; Reader</h3>
+        <span class="org">UC Irvine</span>
+        <span class="meta">Apr 2025 — Present</span>
+        <ul>
+
+          <li>Teaching Assistant for Professional Engineering Fundamentals (MAE 202P) and Control Systems (ENGRMAE 170):</li>
+          <li>Prepared model solutions, graded assignments, and provided academic support through office hours and discussion sessions.</li>
+          <li>Reader for Mechanics of Structures (ENGRMAE 150) and Dynamics & Control of Aerospace Vehicles (ENGRMAE 175):</li>
+            <li>Graded homework, quizzes, midterms, and final exams while ensuring consistent, accurate, and fair evaluation.</li></ul>
+        <div class="row-chips"><span class="chip">Control Systems</span><span class="chip">Instruction</span></div>
+      </div>
+    </div>
+
+    <div class="exp-row no-img">
+      <div>
+        <h3>Prototyping Lab Engineer</h3>
+        <span class="org">UCI Beall Applied Innovation</span>
+        <span class="meta">Jul 2025 — Jan 2026</span>
+        <ul>
+          <li>Optimized prototyping workflows for 6 startups by training teams on lab equipment, cutting iteration time by 25% and prototype turnaround by ~20% under high-demand conditions.</li>
+          <li>Operated and maintained laser cutting systems (VLS, Epilog) across 3+ machines, producing 55–65 functional parts per week.</li>
+          <li>Managed 3D printing operations across 9+ printers (UltiMaker, Bambu, Formlabs 3+), completing 265+ prints per month while minimizing downtime.</li>
+          <li>Fabricated mechanical components using CNC milling, mini lathe, mill, and bandsaw, holding tight dimensional tolerances for functional prototypes.</li>
+        </ul>
+        <div class="row-chips"><span class="chip">3D Printing</span><span class="chip">Laser Cutting</span><span class="chip">CNC Milling</span></div>
+      </div>
+    </div>
+
+    <div class="exp-row no-img">
+      <div>
+        <h3>Mechanical Instructor</h3>
+        <span class="org">Trace Education &amp; Mindvalley</span>
+        <span class="meta">May 2023 — Apr 2025 · Giza, Egypt</span>
+        <ul>
+          <li>Instructed and mentored over 265 high school students in SolidWorks, Arduino, and basic programming through hands-on mechanical design projects.</li>
+          <li>Developed and delivered curriculum modules on CAD modeling, prototyping, and system integration.</li>
+          <li>Guided students in applying engineering design principles from concept to prototype.</li>
+        </ul>
+        <div class="row-chips"><span class="chip">SolidWorks</span><span class="chip">Arduino</span><span class="chip">Curriculum Design</span></div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- INTERNSHIPS -->
+  <section class="section" id="internships">
+    <h2 class="section-title">Internships</h2>
+    <p class="section-sub">Hands-on exposure across aerospace manufacturing, space agencies, energy companies, aviation maintenance, and the United Nations.</p>
+
+    <div class="exp-grid">
+    <div class="exp-row no-img">
+      <div>
+        <h3>Aerospace Manufacturing Engineer Intern</h3>
+        <span class="org">Atlas Specialty Products (Novaria Group)</span>
+        <span class="meta">Jul — Sep 2026 · California, USA</span>
+        <ul>
+          <li>Supported manufacturing engineers in improving aerospace production processes through process optimization and continuous improvement initiatives.</li>
+          <li>Assisted in developing and updating work instructions, engineering documentation, and engineering change orders (ECOs).</li>
+          <li>Collaborated with Manufacturing, Quality, and Production teams to analyze production data, investigate process issues, and implement corrective actions.</li>
+          <li>Contributed to tooling, fixturing, and workflow improvements while applying Lean Manufacturing principles and aerospace quality standards (AS9100).</li>
+        </ul>
+        <div class="row-chips"><span class="chip">Lean Manufacturing</span><span class="chip">AS9100</span><span class="chip">Process Optimization</span></div>
+      </div>
+    </div>
+
+    <div class="exp-row no-img">
+      <div>
+        <h3>Ambassador — Youth4Sustainability</h3>
+        <span class="org">United Nations Development Programme (UNDP) · Co-Founder, Beat Plastic</span>
+        <span class="meta">Sep 2024 — Jul 2025 · Cairo, Egypt</span>
+        <ul>
+          <li>Selected as a Youth4Sustainability (Y4S) Ambassador in a program supported by UNDP Egypt, Egypt's Ministry of Youth and Sports, and Flat6Labs.</li>
+          <li>Participated in intensive workshops on the UN Sustainable Development Goals (SDGs), sustainability, entrepreneurship, and social impact.</li>
+          <li>Co-founded Beat Plastic, a sustainability-focused startup that transforms recycled plastic waste into prosthetic limbs.</li>
+        </ul>
+        <div class="row-chips"><span class="chip">Sustainability</span><span class="chip">Social Impact</span><span class="chip">Startup</span></div>
+      </div>
+    </div>
+
+    <div class="exp-row no-img">
+      <div>
+        <h3>Aircraft Maintenance Intern</h3>
+        <span class="org">EgyptAir</span>
+        <span class="meta">Sep — Oct 2023 · Cairo, Egypt</span>
+        <ul>
+          <li>Gained hands-on experience in gas turbine engines, structural repairs, and maintenance procedures to ensure aircraft airworthiness.</li>
+          <li>Observed advanced non-destructive testing (NDT) procedures at Hangar 8000, applying cutting-edge maintenance technology.</li>
+        </ul>
+        <div class="row-chips"><span class="chip">Gas Turbines</span><span class="chip">NDT</span><span class="chip">Structural Repair</span></div>
+      </div>
+    </div>
+
+    <div class="exp-row no-img">
+      <div>
+        <h3>Winter Internship</h3>
+        <span class="org">Siemens Energy</span>
+        <span class="meta">Feb — Mar 2023 · Ain Sokhna, Egypt</span>
+        <ul>
+          <li>Gained expertise in various engine types — internal combustion, diesel, and petrol engines — in a working power generation facility.</li>
+          <li>Acquired knowledge of renewable energy resources, global renewable energy status, and energy market dynamics.</li>
+        </ul>
+        <div class="row-chips"><span class="chip">Turbomachinery</span><span class="chip">Renewable Energy</span><span class="chip">Power Systems</span></div>
+      </div>
+    </div>
+
+    <div class="exp-row no-img">
+      <div>
+        <h3>Space Systems Intern</h3>
+        <span class="org">Egyptian Space Agency (EGSA)</span>
+        <span class="meta">Jul — Sep 2021 · Cairo, Egypt</span>
+        <ul>
+          <li>Gained extensive knowledge about satellite systems, components, production processes, and the launch of CanSat.</li>
+          <li>Implemented a complete satellite model, applying practical knowledge through hands-on laboratory work.</li>
+        </ul>
+        <div class="row-chips"><span class="chip">Satellite Systems</span><span class="chip">CanSat</span><span class="chip">Space Systems</span></div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="section" id="skills" style="background:var(--light-grey);">
+    <h2 class="section-title">Technical Skills</h2>
+    <div class="card-grid three">
+      <div class="skill-col">
+        <h4>CAD &amp; Simulation</h4>
+        <div class="skill-row"><div class="top"><span>SolidWorks</span><span class="pct">92%</span></div><div class="bar"><span style="width:92%"></span></div></div>
+        <div class="skill-row"><div class="top"><span>Ansys Fluent</span><span class="pct">88%</span></div><div class="bar"><span style="width:88%"></span></div></div>
+        <div class="skill-row"><div class="top"><span>COMSOL Multiphysics</span><span class="pct">78%</span></div><div class="bar"><span style="width:78%"></span></div></div>
+        <div class="skill-row"><div class="top"><span>Autodesk Inventor / AutoCAD</span><span class="pct">80%</span></div><div class="bar"><span style="width:80%"></span></div></div>
+        <div class="skill-row"><div class="top"><span>Proteus</span><span class="pct">62%</span></div><div class="bar"><span style="width:62%"></span></div></div>
+      </div>
+      <div class="skill-col">
+        <h4>Software &amp; Embedded</h4>
+        <div class="skill-row"><div class="top"><span>MATLAB &amp; Simulink</span><span class="pct">90%</span></div><div class="bar"><span style="width:90%"></span></div></div>
+        <div class="skill-row"><div class="top"><span>Python</span><span class="pct">85%</span></div><div class="bar"><span style="width:85%"></span></div></div>
+        <div class="skill-row"><div class="top"><span>C / C++</span><span class="pct">75%</span></div><div class="bar"><span style="width:75%"></span></div></div>
+        <div class="skill-row"><div class="top"><span>Arduino IDE</span><span class="pct">80%</span></div><div class="bar"><span style="width:80%"></span></div></div>
+        <div class="skill-row"><div class="top"><span>LaTeX</span><span class="pct">85%</span></div><div class="bar"><span style="width:85%"></span></div></div>
+      </div>
+      <div class="skill-col">
+        <h4>Manufacturing &amp; Test</h4>
+        <div class="skill-row"><div class="top"><span>FEA / CFD</span><span class="pct">88%</span></div><div class="bar"><span style="width:88%"></span></div></div>
+        <div class="skill-row"><div class="top"><span>3D Printing &amp; Laser Cutting</span><span class="pct">94%</span></div><div class="bar"><span style="width:94%"></span></div></div>
+        <div class="skill-row"><div class="top"><span>Structural / Vibration Testing</span><span class="pct">80%</span></div><div class="bar"><span style="width:80%"></span></div></div>
+        <div class="skill-row"><div class="top"><span>GD&amp;T &amp; Rapid Prototyping</span><span class="pct">85%</span></div><div class="bar"><span style="width:85%"></span></div></div>
+        <div class="skill-row"><div class="top"><span>Technical Writing &amp; Research</span><span class="pct">88%</span></div><div class="bar"><span style="width:88%"></span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESEARCH & PAPERS -->
+  <section class="section" id="papers">
+    <h2 class="section-title">Research &amp; Papers</h2>
+    <p class="section-sub">Ongoing research spanning plasma flow control, autonomous UAV systems, and mine detection robotics.</p>
+    <div class="card-grid three">
+      <div class="card">
+        <div class="card-body">
+          <div class="tag-eyebrow">Manuscript</div>
+          <h3>Dielectric Barrier Discharge DC-Pulsating Plasma Flow Control: Experimental and Numerical Studies</h3>
+          <p>Focuses on how DBD plasma modulated by direct current pulsations influences aerodynamic flows — specifically boundary layer modification and drag reduction. Experimental findings compared with simulations to assess efficacy.</p>
+          <div class="meta-line">PI: Prof. Ahmed Eltaweel · Zewail City · Sep 2023 – Jun 2024</div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <div class="tag-eyebrow published">Published</div>
+          <h3>Computer Vision and Machine Learning Based Mine Detection and Mapping Robot Using ArUco Markers</h3>
+          <p>Developed a robotic system employing computer vision and machine learning for effective mine detection and mapping. Utilized ArUco markers to enhance navigation and localization, reducing human risk.</p>
+          <div class="meta-line">PI: Prof. Mostafa M. Abdalla · Zewail City · Nov 2021 – Mar 2022</div>
+<div class="doi-line"><a href="https://ieeexplore.ieee.org/document/11602943" target="_blank" rel="noopener noreferrer">View on IEEE Xplore →</a></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <div class="tag-eyebrow">Manuscript</div>
+          <h3>Advanced AI Image Processing and Payload Delivery with an Autonomous UAV</h3>
+          <p>Developed a fully autonomous UAV leveraging machine learning to process and analyze aerial imagery for disaster response. Features a mechanism for accurate payload delivery to remote locations.</p>
+          <div class="meta-line">Arab Academy for Science &amp; Technology · Sep 2020 – Mar 2022</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="section" id="projects" style="background:var(--light-grey);">
+    <h2 class="section-title">Selected Projects</h2>
+    <p class="section-sub">Across robotics, autonomy, structures, and manufacturing — built, tested, and validated end to end.</p>
+    <div class="filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="aero">Aerodynamics &amp; CFD</button>
+      <button class="filter-btn" data-filter="robotics">Robotics &amp; Controls</button>
+      <button class="filter-btn" data-filter="structures">Structures &amp; Vehicles</button>
+      <button class="filter-btn" data-filter="manufacturing">Manufacturing</button>
+    </div>
+    <div class="card-grid" id="projectsGrid">
+
+      <div class="card project-card" data-cat="structures">
+        <div class="card-img gallery-trigger" onclick='openGallery(["images/MEMS/1.png", "images/MEMS/2.png", "images/MEMS/3.png", "images/MEMS/4.png", "images/MEMS/5.png", "images/MEMS/6.png", "images/MEMS/7.png", "images/MEMS/8.png", "images/MEMS/9.png", "images/MEMS/10.png"], "MEMS Microthruster")'><img src="images/MEMS/1.png" alt="MEMS Microthruster"><span class="img-count">1 / 10</span></div>
+        <div class="card-body">
+          <div class="tag-eyebrow">MEMS · Microfabrication · Propulsion</div>
+          <h3>MEMS Microthruster</h3>
+          <p>Analytical and COMSOL-based modeling of nitrogen-based electrothermal micro-thrusters for CubeSat propulsion, including a lumped thermal-circuit and transfer-function model of a resistojet system.</p>
+          <div class="impact">→ Modeled a resistojet's coupled electrical, thermal, and fluidic behavior with a lumped-parameter transfer-function approach</div>
+        </div>
+      </div>
+
+      <div class="card project-card" data-cat="manufacturing">
+        <div class="card-img gallery-trigger" onclick='openGallery(["images/Ankle/1.png", "images/Ankle/2.png", "images/Ankle/3.png", "images/Ankle/4.mp4", "images/Ankle/2.mp4", "images/Ankle/3.mp4", "images/Ankle/5.mov"], "Ankle Mobility Trainer")'><img src="images/Ankle/1.png" alt="Ankle Mobility Trainer"><span class="img-count">1 / 7</span></div>
+        <div class="card-body">
+          <div class="tag-eyebrow">Mechatronics · Medical Device · Fabrication</div>
+          <h3>Ankle Mobility Trainer</h3>
+          <p>Designed and developed an ankle mobility trainer to improve range of motion through controlled mechanical movement. Fabricated the prototype entirely via 3D printing and validated motion through physical testing and simulation.</p>
+          <div class="impact">→ Fully functional printed prototype</div>
+        </div>
+      </div>
+
+      <div class="card project-card" data-cat="manufacturing">
+        <div class="card-img gallery-trigger" onclick='openGallery(["images/prototyping/Cover.png", "images/prototyping/Cove_Lab.jpg", "images/prototyping/2.jpeg", "images/prototyping/3.jpeg", "images/prototyping/4.jpeg", "images/prototyping/1.jpeg", "images/prototyping/1a.jpeg", "images/prototyping/5.jpeg", "images/prototyping/6.jpeg", "images/prototyping/7.jpeg", "images/prototyping/8.jpeg", "images/prototyping/9.jpeg"], "Prototyping Workflow Optimization")'><img src="images/prototyping/Cover.png" alt="Prototyping Workflow Optimization"><span class="img-count">1 / 12</span></div>
+        <div class="card-body">
+          <div class="tag-eyebrow">Manufacturing · Lab Operations · UCI</div>
+          <h3>Prototyping Workflow Optimization</h3>
+          <p>Optimized prototyping workflows for 6 startups at UCI Beall Applied Innovation by training teams on laser cutting, 3D printing, and machining tools. Restructured lab processes for high-demand conditions.</p>
+          <div class="impact">→ 25% faster iteration · ~20% faster prototype turnaround</div>
+        </div>
+      </div>
+
+      <div class="card project-card" data-cat="aero">
+        <div class="card-img gallery-trigger" onclick='openGallery(["images/DBD/2.png", "images/DBD/6.png", "images/DBD/3.png", "images/DBD/3.jpg", "images/DBD/5.mp4"], "DBD Plasma Actuators for Active Flow Control")'><img src="images/DBD/2.png" alt="DBD Plasma Actuators for Active Flow Control"><span class="img-count">1 / 5</span></div>
+        <div class="card-body">
+          <div class="tag-eyebrow">Aerodynamics · Plasma Actuation · Graduation Project</div>
+          <h3>DBD Plasma Actuators for Active Flow Control</h3>
+          <p>Investigated Dielectric Barrier Discharge plasma actuators for active aerodynamic flow control to reduce flow separation and drag. Led all numerical simulations in ANSYS Fluent, including plasma body force implementation.</p>
+          <div class="impact">→ Graduation Project — Grade: Excellent · DBD plasma on flat plate and NACA 0012</div>
+        </div>
+      </div>
+
+      <div class="card project-card" data-cat="aero">
+        <div class="card-img gallery-trigger" onclick='openGallery(["images/NACA/A1.png", "images/NACA/A2.png", "images/NACA/A3.png", "images/NACA/A4.png", "images/NACA/A5.png"], "NACA 23014 Airfoil Analysis")'><img src="images/NACA/A1.png" alt="NACA 23014 Airfoil Analysis"><span class="img-count">1 / 5</span></div>
+        <div class="card-body">
+          <div class="tag-eyebrow">Aerodynamics · CFD · Airfoil</div>
+          <h3>NACA 23014 Airfoil Analysis</h3>
+          <p>Numerical analysis of 2D incompressible potential flow over a NACA 23014 airfoil at 5° angle of attack, computing lift, drag, and moment coefficients using Laplace's equation in stream-function form.</p>
+          <div class="impact">→ Cl, Cd, Cm validated across MATLAB, ANSYS Fluent, Xfoil &amp; QBlade</div>
+        </div>
+      </div>
+
+      <div class="card project-card" data-cat="aero">
+        <div class="card-img gallery-trigger" onclick='openGallery(["images/Onera/1.png", "images/Onera/2.png", "images/Onera/3.png", "images/Onera/4.png"], "ONERA M6 Wing Analysis")'><img src="images/Onera/1.png" alt="ONERA M6 Wing Analysis"><span class="img-count">1 / 4</span></div>
+        <div class="card-body">
+          <div class="tag-eyebrow">Aerodynamics · Transonic CFD · Wing</div>
+          <h3>ONERA M6 Wing Analysis</h3>
+          <p>Simulation and validation of 3D transonic compressible flow over the ONERA M-6 wing using ANSYS Fluent at Mach 0.8395. Captured shock wave location and supersonic region, compared against published data.</p>
+          <div class="impact">→ Shock wave and supersonic region validated against experimental benchmark</div>
+        </div>
+      </div>
+
+      <div class="card project-card" data-cat="robotics">
+        <div class="card-img gallery-trigger" onclick='openGallery(["images/derdo/logo.png", "images/derdo/upper.png", "images/derdo/lower.png", "images/derdo/prototype.jpg", "images/derdo/prototype2.png", "images/derdo/testing.jpg", "images/derdo/prototype.mp4"], "DERDO — Brain-Controlled Assistance Robot")'><img src="images/derdo/logo.png" alt="DERDO — Brain-Controlled Assistance Robot"><span class="img-count">1 / 7</span></div>
+        <div class="card-body">
+          <div class="tag-eyebrow">Robotics · Neural Interfaces · Patent</div>
+          <h3>DERDO — Brain-Controlled Assistance Robot</h3>
+          <p>Designed DERDO, a robot enabling mobility for individuals with paralysis through brain signal interpretation via BCI. Tested on patients at Kasr Al-Aini Hospital under Prof. Amr Hassan, Cairo University.</p>
+          <div class="impact">→ Egyptian Patent No. 970/2016 · Clinically validated at Kasr Al-Aini Hospital</div>
+        </div>
+      </div>
+
+      <div class="card project-card" data-cat="robotics">
+        <div class="card-img gallery-trigger" onclick='openGallery(["images/minesweeper/robot1.png", "images/minesweeper/robot.png", "images/minesweeper/solidworks.png", "images/minesweeper/Arm.png", "images/minesweeper/ArmResult.png", "images/minesweeper/ArUcoMarkerDetection.png", "images/minesweeper/disc.jpeg", "images/minesweeper/real.jpeg", "images/minesweeper/tire.png", "images/minesweeper/pcb.jpg", "images/minesweeper/algorithm.png", "images/minesweeper/test.mp4"], "Minesweeper Robot")'><img src="images/minesweeper/robot1.png" alt="M
