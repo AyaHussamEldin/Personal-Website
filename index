@@ -907,7 +907,7 @@
       </div>
 
       <div class="card project-card" data-cat="manufacturing">
-        <div class="card-img gallery-trigger" onclick='openGallery(["images/Ankle/1.png", "images/Ankle/2.png", "images/Ankle/3.png", "images/Ankle/4.mp4", "images/Ankle/2.mp4", "images/Ankle/3.mp4", "images/Ankle/5.mov"], "Ankle Mobility Trainer")'><img src="images/Ankle/1.png" alt="Ankle Mobility Trainer"><span class="img-count">1 / 7</span></div>
+        <div class="card-img gallery-trigger" onclick='openGallery(["images/Ankle/1.png", "images/Ankle/2.png", "images/Ankle/3.png", "images/Ankle/4.mp4", "images/Ankle/2.mp4", "images/Ankle/3.mp4", "images/Ankle/5.mp4"], "Ankle Mobility Trainer")'><img src="images/Ankle/1.png" alt="Ankle Mobility Trainer"><span class="img-count">1 / 7</span></div>
         <div class="card-body">
           <div class="tag-eyebrow">Mechatronics · Medical Device · Fabrication</div>
           <h3>Ankle Mobility Trainer</h3>
