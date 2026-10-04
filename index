@@ -577,7 +577,7 @@
   }
   header.site-header nav{
     display:flex;
-    gap:50px;
+    gap:25px;
     font-size:0.9rem;
     flex-wrap:wrap;
   }
