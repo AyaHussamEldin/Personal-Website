@@ -616,13 +616,15 @@
   }
   @media (max-width:900px){ header.site-header nav{gap:14px; font-size:0.78rem;} }
 
-  footer.site-footer{
+footer.site-footer{
     padding:30px 8vw;
     text-align:center;
     color:var(--grey-text);
     font-size:0.85rem;
     border-top:1px solid var(--border);
   }
+  #jotform-wrap{width:100%;}
+  #jotform-wrap iframe{width:100% !important;border:none;}
 </style>
   
 </head>
@@ -1302,12 +1304,9 @@
           <a class="clink" href="https://scholar.google.com/citations?hl=en&user=HSHLF8UAAAAJ" target="_blank" rel="noopener noreferrer"><span class="ic">🎓</span> Google Scholar</a>
         </div>
       </div>
-      <form id="contactForm" onsubmit="event.preventDefault(); this.querySelector('.submit-btn').textContent='Sent ✓';">
-        <div class="field"><label>Email</label><input type="email" placeholder="your@email.com" required></div>
-        <div class="field"><label>Subject</label><input type="text" placeholder="Subject" required></div>
-        <div class="field"><label>Message</label><textarea placeholder="Your message here..." required></textarea></div>
-        <button type="submit" class="btn btn-primary submit-btn">Send Message →</button>
-      </form>
+      <div id="jotform-wrap">
+        <script type="text/javascript" src="https://form.jotform.com/jsform/262761774159064"></script>
+      </div>
     </div>
   </section>
 
